@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d">
+  <title id="t">Cómo se conecta la planta</title>
+  <desc id="d">Cada máquina corre la app de estación y deja sus eventos en su carpeta dentro de la carpeta compartida. El MES Central los lee cada 2 segundos y publica el avance de cada orden, el catálogo de números de parte y las reglas del candado de flujo.</desc>
+  <defs>
+    <pattern id="rej" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#FFFFFF" stroke-opacity="0.03"/>
+    </pattern>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8A8F98"/>
+    </marker>
+    <marker id="flechaL" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#B08A45"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="560" rx="6" fill="#0F1114"/>
+  <rect width="1200" height="560" rx="6" fill="url(#rej)"/>
+
+  <g font-family="Bahnschrift, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <!-- Encabezados de columna -->
+    <g font-size="13" font-weight="600" letter-spacing="3" fill="#B08A45">
+      <text x="40" y="62">PISO DE PRODUCCIÓN</text>
+      <text x="440" y="62">CARPETA COMPARTIDA</text>
+      <text x="880" y="62">MES CENTRAL</text>
+    </g>
+    <g font-size="13" fill="#6E747C">
+      <text x="40" y="84">una PC con la app en cada máquina</text>
+      <text x="440" y="84">local o en red: una sola ruta al instalar</text>
+      <text x="880" y="84">un servidor web para toda la planta</text>
+    </g>
+
+    <!-- Máquinas -->
+    <g>
+      <rect x="40" y="110" width="290" height="96" rx="3" fill="#181B20" stroke="#2E343B"/>
+      <text x="62" y="140" fill="#E4E6E9" font-size="16" font-weight="600">Corte 1</text>
+      <text x="62" y="162" fill="#8A8F98" font-family="Consolas, monospace" font-size="12">COR-L1-ST01 · CORTE</text>
+      <rect x="62" y="176" width="9" height="9" fill="#D6D9DC"/>
+      <text x="80" y="185" fill="#D6D9DC" font-size="11" font-weight="600" letter-spacing="1.5">PRODUCIENDO · MO-24001 · 12/19</text>
+
+      <rect x="40" y="222" width="290" height="96" rx="3" fill="#181B20" stroke="#2E343B"/>
+      <text x="62" y="252" fill="#E4E6E9" font-size="16" font-weight="600">Soldadora 1</text>
+      <text x="62" y="274" fill="#8A8F98" font-family="Consolas, monospace" font-size="12">SOL-L1-ST04 · SOLDADURA</text>
+      <rect x="62" y="288" width="9" height="9" fill="none" stroke="#878D95"/>
+      <text x="80" y="297" fill="#878D95" font-size="11" font-weight="600" letter-spacing="1.5">EN ESPERA</text>
+
+      <rect x="40" y="334" width="290" height="96" rx="3" fill="#181B20" stroke="#2E343B"/>
+      <text x="62" y="364" fill="#E4E6E9" font-size="16" font-weight="600">Banco de prueba 1</text>
+      <text x="62" y="386" fill="#8A8F98" font-family="Consolas, monospace" font-size="12">PRU-L1-ST05 · PRUEBA</text>
+      <rect x="62" y="400" width="9" height="9" fill="#D6D9DC"/>
+      <text x="80" y="409" fill="#D6D9DC" font-size="11" font-weight="600" letter-spacing="1.5">PRODUCIENDO · MO-24001 · 8/19</text>
+
+      <rect x="40" y="446" width="290" height="44" rx="3" fill="none" stroke="#2E343B" stroke-dasharray="4 4"/>
+      <text x="185" y="473" text-anchor="middle" fill="#6E747C" font-size="13">+ todas las máquinas de la planta</text>
+    </g>
+
+    <!-- Carpeta -->
+    <g>
+      <rect x="440" y="110" width="330" height="380" rx="3" fill="#131519" stroke="#B08A45" stroke-opacity="0.7"/>
+      <path d="M462 128 h26 l7 7 h36 v24 h-69 z" fill="none" stroke="#B08A45" stroke-width="1.6"/>
+      <text x="544" y="152" fill="#E4E6E9" font-size="15" font-weight="600">carpeta del MES</text>
+      <g font-family="Consolas, 'Cascadia Mono', monospace" font-size="13">
+        <rect x="456" y="178" width="298" height="58" fill="#1A1D22"/>
+        <text x="470" y="200" fill="#C79D51">01_MES</text>
+        <text x="470" y="222" fill="#8A8F98" font-size="11.5">respuestas · catálogo · avance de MO</text>
+        <rect x="456" y="244" width="298" height="58" fill="#1A1D22"/>
+        <text x="470" y="266" fill="#C79D51">02_ESTACIONES\&lt;ID&gt;</text>
+        <text x="470" y="288" fill="#8A8F98" font-size="11.5">eventos del día, uno por renglón</text>
+        <rect x="456" y="310" width="298" height="58" fill="#1A1D22"/>
+        <text x="470" y="332" fill="#C79D51">03_DOCUMENTOS</text>
+        <text x="470" y="354" fill="#8A8F98" font-size="11.5">métodos · ayudas visuales · diseños</text>
+        <rect x="456" y="376" width="298" height="58" fill="#1A1D22"/>
+        <text x="470" y="398" fill="#C79D51">04_RECETAS\&lt;CELDA&gt;\&lt;PROCESO&gt;</text>
+        <text x="470" y="420" fill="#8A8F98" font-size="11.5">recetas compartidas por proceso</text>
+      </g>
+      <text x="605" y="468" text-anchor="middle" fill="#6E747C" font-size="12">cada carpeta tiene un solo dueño que escribe</text>
+    </g>
+
+    <!-- MES -->
+    <g>
+      <rect x="880" y="110" width="280" height="262" rx="3" fill="#181B20" stroke="#2E343B"/>
+      <rect x="902" y="130" width="34" height="34" fill="none" stroke="#B08A45" stroke-width="2"/>
+      <rect x="911" y="139" width="16" height="16" fill="#B08A45"/>
+      <text x="950" y="146" fill="#E4E6E9" font-size="16" font-weight="600">MES Central</text>
+      <text x="950" y="164" fill="#8A8F98" font-size="12">lee la carpeta cada 2 s</text>
+      <g font-size="13.5" fill="#C9CDD2">
+        <text x="904" y="202">▪ Arquitectura de la planta</text>
+        <text x="904" y="230">▪ Avance de cada MO por paso</text>
+        <text x="904" y="258">▪ Liberación de NP por máquina</text>
+        <text x="904" y="286">▪ Tableros en vivo</text>
+        <text x="904" y="314">▪ Reglas del candado de flujo</text>
+        <text x="904" y="342">▪ Auditoría de cada cambio</text>
+      </g>
+
+      <rect x="880" y="400" width="280" height="90" rx="3" fill="none" stroke="#2E343B" stroke-dasharray="4 4"/>
+      <rect x="902" y="420" width="46" height="32" rx="2" fill="none" stroke="#8A8F98" stroke-width="1.5"/>
+      <path d="M902 428 h46" stroke="#8A8F98" stroke-width="1.5"/>
+      <text x="962" y="436" fill="#E4E6E9" font-size="14" font-weight="600">Navegador</text>
+      <text x="962" y="456" fill="#8A8F98" font-size="12">supervisión, calidad, ingeniería</text>
+    </g>
+  </g>
+
+  <!-- Conexiones -->
+  <g fill="none" stroke-width="2">
+    <path id="c1" d="M330 158 H372 V273 H452" stroke="#B08A45" stroke-opacity="0.75" marker-end="url(#flechaL)"/>
+    <path id="c2" d="M330 270 H452" stroke="#B08A45" stroke-opacity="0.75"/>
+    <path id="c3" d="M330 382 H372 V273" stroke="#B08A45" stroke-opacity="0.75"/>
+    <path id="c4" d="M452 207 H392 V224 H330" stroke="#8A8F98" stroke-dasharray="6 5" marker-end="url(#flecha)"/>
+    <path id="c5" d="M754 273 H880" stroke="#B08A45" stroke-opacity="0.75" marker-end="url(#flechaL)"/>
+    <path id="c6" d="M880 190 H818 V207 H754" stroke="#8A8F98" stroke-dasharray="6 5" marker-end="url(#flecha)"/>
+    <path d="M1020 372 V400" stroke="#8A8F98" stroke-dasharray="3 4"/>
+  </g>
+  <g font-family="Bahnschrift, 'Segoe UI', Arial, sans-serif" font-size="11.5">
+    <text x="394" y="452" fill="#C79D51" transform="rotate(-90 394 452)">MO · piezas OK/NOK · firmas</text>
+    <text x="786" y="262" fill="#C79D51">eventos</text>
+    <text x="800" y="182" fill="#A6ABB2">publica</text>
+  </g>
+
+  <!-- Movimiento -->
+  <g>
+    <circle r="4.5" fill="#C79D51"><animateMotion dur="3.2s" repeatCount="indefinite" path="M330 158 H372 V273 H452"/></circle>
+    <circle r="4.5" fill="#C79D51"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" path="M330 270 H452"/></circle>
+    <circle r="4.5" fill="#AE6F66"><animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite" path="M330 382 H372 V273 H452"/></circle>
+    <circle r="4.5" fill="#C79D51"><animateMotion dur="2.2s" begin="0.4s" repeatCount="indefinite" path="M754 273 H880"/></circle>
+    <circle r="4" fill="#E4E6E9"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite" path="M880 190 H818 V207 H754"/></circle>
+    <circle r="4" fill="#E4E6E9"><animateMotion dur="2.6s" begin="2.4s" repeatCount="indefinite" path="M452 207 H392 V224 H330"/></circle>
+  </g>
+</svg>

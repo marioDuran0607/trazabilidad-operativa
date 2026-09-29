@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-labelledby="titulo desc">
+  <title id="titulo">Trazabilidad Operativa</title>
+  <desc id="desc">Cada pieza, en cada máquina, en el orden correcto. Una app para cada máquina y un MES central unidos por una carpeta compartida.</desc>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16181D"/>
+      <stop offset="1" stop-color="#0B0C0E"/>
+    </linearGradient>
+    <linearGradient id="laton" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8C6C33"/>
+      <stop offset="0.5" stop-color="#C79D51"/>
+      <stop offset="1" stop-color="#8C6C33"/>
+    </linearGradient>
+    <pattern id="rejilla" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#B08A45" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#B08A45" stop-opacity="0"/>
+    </radialGradient>
+    <path id="ruta" d="M770 128 H880 V200 H990 M770 200 H990 M770 272 H880 V200 H990 M1050 200 H1150"/>
+  </defs>
+
+  <rect width="1280" height="400" fill="url(#fondo)"/>
+  <rect width="1280" height="400" fill="url(#rejilla)"/>
+  <rect x="0" y="0" width="1280" height="4" fill="url(#laton)"/>
+
+  <!-- Texto -->
+  <g font-family="Bahnschrift, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <text x="72" y="112" fill="#B08A45" font-size="15" font-weight="600" letter-spacing="4">MES CENTRAL + APP DE ESTACIÓN</text>
+    <text x="70" y="178" fill="#F2F3F5" font-size="58" font-weight="700" letter-spacing="-0.5">Trazabilidad</text>
+    <text x="70" y="240" fill="#F2F3F5" font-size="58" font-weight="700" letter-spacing="-0.5">Operativa</text>
+    <text x="72" y="290" fill="#A6ABB2" font-size="20">Cada pieza, en cada máquina, en el orden correcto.</text>
+    <text x="72" y="318" fill="#A6ABB2" font-size="20">Aunque se caiga la red.</text>
+  </g>
+
+  <!-- Flujo: tres máquinas → carpeta compartida → MES -->
+  <g fill="none" stroke="#3C434C" stroke-width="2">
+    <use href="#ruta"/>
+  </g>
+  <g font-family="Consolas, 'Cascadia Mono', monospace" font-size="12" fill="#A6ABB2">
+    <g>
+      <rect x="690" y="108" width="80" height="40" rx="2" fill="#1E2228" stroke="#3C434C"/>
+      <text x="730" y="133" text-anchor="middle">CORTE</text>
+      <rect x="690" y="180" width="80" height="40" rx="2" fill="#1E2228" stroke="#3C434C"/>
+      <text x="730" y="205" text-anchor="middle">DOBLEZ</text>
+      <rect x="690" y="252" width="80" height="40" rx="2" fill="#1E2228" stroke="#3C434C"/>
+      <text x="730" y="277" text-anchor="middle">PRUEBA</text>
+      <text x="730" y="315" text-anchor="middle" fill="#6E747C" font-size="11">máquinas</text>
+    </g>
+    <g>
+      <path d="M990 180 h22 l6 6 h32 v34 h-60 z" fill="#1E2228" stroke="#B08A45" stroke-width="2"/>
+      <text x="1020" y="243" text-anchor="middle" fill="#6E747C" font-size="11">carpeta</text>
+    </g>
+    <g>
+      <circle cx="1180" cy="200" r="70" fill="url(#halo)"/>
+      <rect x="1150" y="170" width="60" height="60" rx="2" fill="#131519" stroke="#B08A45" stroke-width="2"/>
+      <rect x="1164" y="184" width="32" height="32" fill="#B08A45"/>
+      <text x="1180" y="256" text-anchor="middle" fill="#C79D51" font-size="12" font-weight="700">MES</text>
+    </g>
+  </g>
+
+  <!-- Piezas que viajan (OK en latón, una NOK en ladrillo) -->
+  <g>
+    <circle r="5" fill="#C79D51">
+      <animateMotion dur="4s" repeatCount="indefinite" path="M770 128 H880 V200 H990"/>
+    </circle>
+    <circle r="5" fill="#C79D51">
+      <animateMotion dur="4s" begin="1.3s" repeatCount="indefinite" path="M770 200 H990"/>
+    </circle>
+    <circle r="5" fill="#AE6F66">
+      <animateMotion dur="4s" begin="2.6s" repeatCount="indefinite" path="M770 272 H880 V200 H990"/>
+    </circle>
+    <circle r="4" fill="#E4E6E9">
+      <animateMotion dur="2s" repeatCount="indefinite" path="M1050 200 H1150"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
