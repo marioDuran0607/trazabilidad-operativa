@@ -2,6 +2,7 @@
   <img src="assets/banner.svg" alt="Trazabilidad Operativa: cada pieza, en cada máquina, en el orden correcto" width="100%">
 </p>
 
+
 <p align="center">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white">
   <img alt="PySide6" src="https://img.shields.io/badge/PySide6-Qt%206-41CD52?style=flat-square&logo=qt&logoColor=white">
